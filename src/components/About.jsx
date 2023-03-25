@@ -1,9 +1,11 @@
 import React from "react";
-import profile from "../assets/Profile.jpeg"
+import profile from "../assets/about.jpg"
 const About = () => {
+  let width = window.innerWidth;
   return (
     <div
       name="about"
+      style={width <= 600?{height:"120vh"}:{}}
       className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
@@ -12,15 +14,15 @@ const About = () => {
             About
           </p>
         </div>
-        <div style={{ width: "60vw" }} className="flex gap-2">
-          <p className="text-xl mt-20">
-            My name is Sukhvindra Singh. I am from Uttar Pradesh. <br></br>
+        <div className="flex gap-2" style={width <= 600? { width: "100%",flexDirection:"column" }:{ width: "100%",flexDirection:"row" }}>
+          <img src={profile} alt="profile" style={width <= 600?{width:"100%",height:"70%",borderRadius:"20px"}:{width:"100%",borderRadius:"20px"}}/>
+          <p className="text-xl pe-2 text-justify">
+            My name is Sukhvindra Singh. I am from Uttar Pradesh.
             Currenty, I am pursuing BCA(Bechalor of Computer application) And I
             am a MERN Stack Developer/Java Developer/Mendix Rapid Developer. My
-            hobbies are Watching and playing cricket ,Learn new skills,
+            hobbies are Watching and playing cricket, Learn new skills,
             Reading books.
           </p>
-          <img src={profile} alt="profile" style={{borderRadius:"20px"}}/>
         </div>
 
         <br />
@@ -30,3 +32,5 @@ const About = () => {
 };
 
 export default About;
+// 
+//  
