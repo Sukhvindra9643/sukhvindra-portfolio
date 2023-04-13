@@ -39,7 +39,7 @@ const Home = () => {
               className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
             >
               <a
-                href="./resume.pdf"
+                href="./Resume.pdf"
                 className="flex justify-between items-center w-full text-white ml-1"
                 download={true}
               >
